@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
-  title: "Elisa Drumond | Desenvolvedora Fullstack",
+  title: "Elisa Drumond | Fullstack Developer React, Next.js e Node.js",
   description:
-    "Portfólio de Elisa Drumond, desenvolvedora fullstack com foco em React, Next.js, Node.js, performance web, SEO e experiências digitais.",
+    "Portfólio de Elisa Drumond com projetos em React, Next.js, Node.js, performance web, SEO técnico, APIs e experiências digitais.",
   keywords: [
     "Elisa Drumond",
     "Desenvolvedora Fullstack",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   creator: "Elisa Drumond",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Elisa Drumond | Desenvolvedora Fullstack",
+    title: "Elisa Drumond | Fullstack Developer React, Next.js e Node.js",
     description:
-      "Desenvolvimento web com foco em performance, SEO e experiências digitais.",
+      "Conheça meu portfólio com foco em performance web, SEO técnico, APIs e experiências digitais modernas.",
     url: siteUrl,
     siteName: "Elisa Drumond",
     images: [
