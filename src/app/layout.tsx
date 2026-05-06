@@ -16,11 +16,12 @@ const geistMono = Geist_Mono({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
-  title: "Elisa Drumond | Fullstack Developer React, Next.js e Node.js",
+  title: "Elisa Drumond Anjo | Fullstack Developer React, Next.js e Node.js",
   description:
-    "Portfólio de Elisa Drumond com projetos em React, Next.js, Node.js, performance web, SEO técnico, APIs e experiências digitais.",
+    "Portfólio de Elisa Drumond com projetos em React, Next.js, Node.js, SEO técnico, performance web, APIs REST e experiências digitais modernas.",
   keywords: [
     "Elisa Drumond",
+    "Elisa Drumond Anjo",
     "Desenvolvedora Fullstack",
     "React",
     "Next.js",
@@ -33,19 +34,27 @@ export const metadata: Metadata = {
   creator: "Elisa Drumond",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Elisa Drumond | Fullstack Developer React, Next.js e Node.js",
+    title:
+      "Elisa Drumond Anjo | Fullstack Developer React, Next.js e Node.js",
+
     description:
-      "Conheça meu portfólio com foco em performance web, SEO técnico, APIs e experiências digitais modernas.",
+      "Portfólio de Elisa Drumond com projetos em React, Next.js, Node.js, SEO técnico, performance web, APIs REST e experiências digitais modernas.",
+
     url: siteUrl,
+
     siteName: "Elisa Drumond",
+
     images: [
       {
-        url: "/og.png",
+        url: "/og.png?v=2",
         width: 1200,
         height: 630,
+        alt: "Portfólio de Elisa Drumond - Fullstack Developer",
       },
     ],
+
     locale: "pt_BR",
+
     type: "website",
   },
 };
