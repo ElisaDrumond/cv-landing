@@ -1,3 +1,7 @@
+"use client";
+
+import { trackEvent } from "@/lib/analytics";
+
 export function Hero() {
   return (
     <section className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-6">
@@ -18,6 +22,12 @@ export function Hero() {
       <div className="mt-8 flex gap-4">
         <a
           href="#projects"
+          onClick={() =>
+            trackEvent("click_hero_cta", {
+              section: "hero",
+              label: "view_projects",
+            })
+          }
           className="rounded-full bg-white px-5 py-3 font-medium text-zinc-950"
         >
           Ver projetos
@@ -25,6 +35,12 @@ export function Hero() {
 
         <a
           href="#contact"
+          onClick={() =>
+            trackEvent("click_contact_cta", {
+              section: "hero",
+              label: "contact",
+            })
+          }
           className="rounded-full border border-zinc-700 px-5 py-3 font-medium text-white"
         >
           Contato
