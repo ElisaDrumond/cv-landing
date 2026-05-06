@@ -29,6 +29,7 @@ export function Contact() {
           <a
             href="https://site.vizzuallab.com"
             target="_blank"
+            rel="noopener noreferrer"
             className="underline"
           >
             site.vizzuallab.com

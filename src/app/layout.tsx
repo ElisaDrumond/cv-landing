@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
 };
 
 export default function RootLayout({
@@ -52,7 +53,7 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-zinc-950 text-white">
         {children}
-        
+
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
