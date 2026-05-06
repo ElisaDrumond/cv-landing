@@ -1,6 +1,4 @@
-"use client";
-
-import { trackEvent } from "@/lib/analytics";
+import { HeroActions } from "@/components/HeroActions";
 
 export function Hero() {
   return (
@@ -10,7 +8,8 @@ export function Hero() {
       </p>
 
       <h1 className="max-w-3xl text-5xl font-bold leading-tight md:text-7xl">
-        Elisa Drumond — Desenvolvedora Fullstack focada em performance e experiência digital.
+        Elisa Drumond — Desenvolvedora Fullstack focada em performance e
+        experiência digital.
       </h1>
 
       <p className="mt-6 max-w-2xl text-lg text-zinc-300">
@@ -19,33 +18,7 @@ export function Hero() {
         experiência do usuário.
       </p>
 
-      <div className="mt-8 flex gap-4">
-        <a
-          href="#projects"
-          onClick={() =>
-            trackEvent("click_hero_cta", {
-              section: "hero",
-              label: "view_projects",
-            })
-          }
-          className="rounded-full bg-white px-5 py-3 font-medium text-zinc-950"
-        >
-          Ver projetos
-        </a>
-
-        <a
-          href="#contact"
-          onClick={() =>
-            trackEvent("click_contact_cta", {
-              section: "hero",
-              label: "contact",
-            })
-          }
-          className="rounded-full border border-zinc-700 px-5 py-3 font-medium text-white"
-        >
-          Contato
-        </a>
-      </div>
+      <HeroActions />
     </section>
   );
 }
