@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
+import { GoogleAnalyticsLazy } from "@/components/GoogleAnalyticsLazy";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -71,10 +72,8 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-zinc-950 text-white">
         {children}
-
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
+        <AnalyticsEvents />
+        <GoogleAnalyticsLazy />
       </body>
     </html>
   );
