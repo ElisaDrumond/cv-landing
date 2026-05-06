@@ -1,4 +1,4 @@
-import { HeroActions } from "@/components/HeroActions";
+import { HeroActions } from "./HeroActions";
 
 export function Hero() {
   return (
