@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: "Elisa Drumond | Desenvolvedora Fullstack",
   description:
@@ -29,16 +31,23 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Elisa Drumond" }],
   creator: "Elisa Drumond",
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Elisa Drumond | Desenvolvedora Fullstack",
     description:
       "Desenvolvimento web com foco em performance, SEO e experiências digitais.",
-    url: "https://site.vizzuallab.com",
+    url: siteUrl,
     siteName: "Elisa Drumond",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "pt_BR",
     type: "website",
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
 };
 
 export default function RootLayout({
